@@ -26,9 +26,9 @@
         <span class="logo-content__adress logo-content-text">Пр. Победы 100</span>
         <a class="logo-content__phone logo-content-text" href="tel:8 927 249-19-31">8 927 249-19-31</a>
         <div class="logo-content__btn">
-         <button id="my-btn" class="button button__link my-btn" type="button">
-          Заказать звонок 
-         </button>
+          <button id="my-btn" name="call-me" class="button button__link my-btn" type="button">
+            Заказать звонок
+          </button>
         </div>
       </div>
     </div>
@@ -67,23 +67,26 @@
           Конечную стоимость рассчитывает замерщик. Поэтому предлагаем вызвать его. Тем более сегодня такая скидка.
         </p>
       </div>
-      <div class="glazing-calc__offer" >
+      <div class="glazing-calc__offer">
         <p class="glazing-calc__offer-data">Только сегодня 26декабря</p>
         <p class="glazing-calc__offer-count">скидка 56%</p>
         <p class="text-s">при вызове замерщика</p>
       </div>
       <form class="glazing-calc__form" action="sand.php" method="post">
         <input class="input-text" type="tel" id="fname" name="fname" placeholder="Введите номер телефона*"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <input class="input-text" type="date" name="date">
         <button class="button glazing-calc-form__btn" type="submit">Вызвать замерщика и получить скидку</button>
         <p class="glazing-calc-form__discr">Вызовите замерщика сегодня
-            и ваша скидка не сгорит в течение 30 дней.
+          и ваша скидка не сгорит в течение 30 дней.
         </p>
       </form>
     </section>
     <section class="container">
       <div class="content-container">
+        <div class="slider-reviews__header">
+          <h2 class="h2">Наши работы</h2>
+        </div>
         <div class="portfolio row">
           <div class="portfolio">
             <img src="Images/raboty-1.jpg" alt="" class="portfolio__img">
@@ -165,7 +168,7 @@
         </div>
       </div>
     </section>
-    <section class="container"  id="calc">
+    <section class="container" id="calc">
       <div class="content-container online-glazing-calc">
         <div class="online-glazing-calc__header">
           <h2 class="h2">Онлайн-калькулятор расчёта стоимости</h2>
@@ -199,7 +202,7 @@
         </form>
       </div>
     </section>
-    <section class="container installment"  id="credit">
+    <section class="container installment" id="credit">
       <div class="content-container">
         <div class="installment__header">
           <h2 class="h2">Рассрочка %</h2>
@@ -322,8 +325,7 @@
     </div>
   </footer>
 
-
-  <div class="overlay" style="display:none;">
+  <div class="overlay" name="call-me" style="display:none;">
     <div class="">
       <form class="form-popup" action="" method="post">
         <div class="form-popup__header">
@@ -339,6 +341,25 @@
       </form>
     </div>
   </div>
+
+  <div class="overlay" name="credit" style="display:none;">
+    <div class="">
+      <form class="form-popup" action="" method="post">
+        <div class="form-popup__header">
+          <h3 class="form-popup__header-text">Узнать о рассрочке</h3>
+        </div>
+        <input class="form-popup__input" type="tel" id="fname" name="fname" placeholder="Введите номер телефона*"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        <div class="form-popup__button">
+          <button class="button button-popup" type="submit">УЗНАТЬ</button>
+        </div>
+        <p>Анна получит ваш номер и позвонит, чтобы рассказать о рассрочке</p>
+        <span class="close-popup closex">x</span>
+      </form>
+    </div>
+  </div>
   <script src="modal-w1.js"></script>
 </body>
+
 </html>

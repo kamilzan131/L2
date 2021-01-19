@@ -3,13 +3,14 @@ let btn = document.getElementsByClassName('my-btn');
 let spClose = document.getElementsByClassName('closex');
 
 
+btn[0].onclick = function () {
+  for (let j = 0; j < modal.length; j++) {
+    modal[j].style.display = "block";
 
-for (let index = 0; index < btn.length; index++) {
-  btn[index].onclick = function () {
-    modal[0].style.display = "block";
-  };
-  
-}
+    
+  }
+};
+
 
 spClose[0].onclick = function () {
   modal[0].style.display = "none";
