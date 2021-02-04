@@ -72,9 +72,9 @@
         <p class="glazing-calc__offer-count">скидка 56%</p>
         <p class="text-s">при вызове замерщика</p>
       </div>
-      <form class="glazing-calc__form" action="sand.php" method="post">
-        <input class="input-text" type="tel" id="fname" name="fname" placeholder="Введите номер телефона*"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <form class="glazing-calc__form" action="sand.php" method="POST">
+        <input class="input-text" type="tel" id="fname" name="tel" placeholder="Введите номер телефона*"
+          pattern="[0-9]{11}" required>
         <input class="input-text" type="date" name="date">
         <button class="button glazing-calc-form__btn" type="submit">Вызвать замерщика и получить скидку</button>
         <p class="glazing-calc-form__discr">Вызовите замерщика сегодня
@@ -221,7 +221,10 @@
             <p class="installment-consult__discr text-white">Опыт работы 8 лет.</p>
             <p class="text-white  quotes text-size-18">Я расскажу о том, как застеклить балкон в рассрочку под 0%</p>
             <div class="installment-consult__button">
-              <a class="button button__link2 my-btn" href="#window-appl">Узнать о рассрочке</a>
+
+              <button id="my-btn" name="credit" class="button button__link2 my-btn" type="button">
+                Узнать о рассрочке
+              </button>
             </div>
           </div>
         </div>
@@ -320,19 +323,22 @@
       <p class="contacts-style text-white contacts-adress">Казань, Пр-т Победы 100.</p>
       <a class="contacts-style text-white contacts-mail" href="post:oknanaveka2006@mail.ru">oknanaveka2006@mail.ru</a>
       <div class="contacts-style text-white contacts-button">
-        <a class="button button__link2 my-btn" href="#call-order">Заказать звонок</a>
+
+        <button id="my-btn" name="call-me" class="button button__link2 my-btn" type="button">
+          Заказать звонок
+        </button>
       </div>
     </div>
   </footer>
 
   <div class="overlay" name="call-me" style="display:none;">
     <div class="">
-      <form class="form-popup" action="" method="post">
+      <form class="form-popup" action="sand.php" method="POST">
         <div class="form-popup__header">
           <h3 class="form-popup__header-text">Оставьте номер телефона, чтобы мы позвонили вам</h3>
         </div>
-        <input class="form-popup__input" type="tel" id="fname" name="fname" placeholder="Телефон*"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <input class="form-popup__input" type="tel" id="fname" name="tel" placeholder="Телефон*" pattern="[0-9]{11}"
+          required>
 
         <div class="form-popup__button">
           <button class="button button-popup" type="submit">ПОЗВОНИТЕ МНЕ</button>
@@ -344,12 +350,12 @@
 
   <div class="overlay" name="credit" style="display:none;">
     <div class="">
-      <form class="form-popup" action="" method="post">
+      <form class="form-popup" action="sand.php" method="POST">
         <div class="form-popup__header">
           <h3 class="form-popup__header-text">Узнать о рассрочке</h3>
         </div>
-        <input class="form-popup__input" type="tel" id="fname" name="fname" placeholder="Введите номер телефона*"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <input class="form-popup__input" type="tel" id="fname" name="tel" placeholder="Введите номер телефона*"
+          pattern="[0-9]{11}" required>
 
         <div class="form-popup__button">
           <button class="button button-popup" type="submit">УЗНАТЬ</button>

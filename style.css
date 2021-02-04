@@ -28,7 +28,7 @@ body {
   font-size: 21px;
   text-transform: none;
   text-decoration: none;
-  /*letter-spacing: 1px;*/
+  outline: inherit;
   position: relative;
   padding: 8px;
 }

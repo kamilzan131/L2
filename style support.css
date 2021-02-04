@@ -121,6 +121,7 @@ h3.block-header-discr {
   border: none;
   min-width: 100px;
   text-decoration: none;
+  outline: inherit;
 }
 
 
